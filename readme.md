@@ -93,6 +93,8 @@ git init
 
 ### Pre-commit hook
 
+git config --local core.hooksPath .githooks/
+
 npm i -D pretty-quick
 
 add
@@ -103,7 +105,7 @@ add
 
 to the scripts in the package.json
 
-create a file in ./git-hooks/pre-commit.sh
+create a file in ./githooks/pre-commit
 
 ```
 #!/bin/sh
@@ -111,19 +113,15 @@ create a file in ./git-hooks/pre-commit.sh
 npm run pretty-quick && npm run lint
 ```
 
-ln -s ../../pre-commit.sh .git/hooks/pre-commit
-
 ### Pre-push hook
 
-create a file in ./git-hooks/pre-push.sh
+create a file in ./githooks/pre-push
 
 ```
 #!/bin/sh
 
 npm run test:no-watch
 ```
-
-ln -s ../../pre-push.sh .git/hooks/pre-push
 
 ### Commit-msg hook
 
@@ -137,15 +135,13 @@ add
 
 to npm scripts in package.json
 
-create a file in ./git-hooks/commit-msg.sh
+create a file in ./githooks/commit-msg
 
 ```
 #!/bin/sh
 
 npm run commitlint
 ```
-
-ln -s ../../commit-msg.sh .git/hooks/commit-msg
 
 create a file commitlint.config.js
 
