@@ -22,6 +22,7 @@ npm i -D eslint
 npm i -D --save-exact prettier
 npm i -D eslint-plugin-react
 npm i -D eslint-plugin-react-hooks
+npm i -D @typescript-eslint/eslint-plugin@latest
 
 copy these files from a previous project:
 .eslintignore
@@ -105,7 +106,8 @@ add
 
 to the scripts in the package.json
 
-create a file in ./.githooks/pre-commit.sh
+create a file in ./.githooks/pre-commit
+chmod 755 .githooks/pre-commit
 
 ```
 #!/bin/sh
@@ -115,7 +117,8 @@ npm run pretty-quick && npm run lint
 
 ### Pre-push hook
 
-create a file in ./.githooks/pre-push.sh
+create a file in ./.githooks/pre-push
+chmod 755 .githooks/pre-push
 
 ```
 #!/bin/sh
@@ -127,7 +130,7 @@ npm run test:no-watch
 
 npm i -D @commitlint/cli @commitlint/config-conventional
 
-add
+addd
 
 ```
 "commitlint": "commitlint --edit $1",
@@ -135,7 +138,8 @@ add
 
 to npm scripts in package.json
 
-create a file in ./.githooks/commit-msg.sh
+create a file in ./.githooks/commit-msg
+chmod 755 .githooks/commit-msg
 
 ```
 #!/bin/sh
@@ -143,7 +147,7 @@ create a file in ./.githooks/commit-msg.sh
 npm run commitlint
 ```
 
-create a file commitlint.config.js
+create a file commitlint.config.cjs
 
 ```
 module.exports = {
