@@ -105,7 +105,7 @@ add
 
 to the scripts in the package.json
 
-create a file in ./githooks/pre-commit
+create a file in ./.githooks/pre-commit.sh
 
 ```
 #!/bin/sh
@@ -115,7 +115,7 @@ npm run pretty-quick && npm run lint
 
 ### Pre-push hook
 
-create a file in ./githooks/pre-push
+create a file in ./.githooks/pre-push.sh
 
 ```
 #!/bin/sh
@@ -135,7 +135,7 @@ add
 
 to npm scripts in package.json
 
-create a file in ./githooks/commit-msg
+create a file in ./.githooks/commit-msg.sh
 
 ```
 #!/bin/sh
