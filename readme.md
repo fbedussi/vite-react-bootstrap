@@ -41,7 +41,8 @@ npm i -D @babel/preset-react @babel/preset-typescript @babel/preset-env
 add
 
 ```
-"test": "jest"
+"test": "jest",
+"test:watch": "jest --watchAll=true",
 ```
 
 to scripts in package.json
