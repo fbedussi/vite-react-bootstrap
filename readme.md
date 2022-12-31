@@ -123,7 +123,7 @@ chmod 755 .githooks/pre-push
 ```
 #!/bin/sh
 
-npm run test:no-watch
+npm run test
 ```
 
 ### Commit-msg hook
